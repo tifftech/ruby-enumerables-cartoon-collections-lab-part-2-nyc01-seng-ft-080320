@@ -1,30 +1,46 @@
-def roll_call_dwarves(array)
-  index = 0
-  array.each_with_index {|name, index| puts "#{index + 1}. #{name} "}
+def summon_captain_planet(array)
+  array.map! do |i|
+    i.capitalize
+  end
+  array.collect do |i|
+    "#{i}!"
+  end
 end
 
-def summon_captain_planet(array)
-  planeteer_calls = []
-  array.collect do |calls|
-    planeteer_calls << "#{calls.capitalize}!"
-  end
-  planeteer_calls
-end
+
+planeteer_calls = ["wind", "fire"]
+
+summon_captain_planet(planeteer_calls)
 
 def long_planeteer_calls(array)
-  array.any? do |word|
-    word.length > 4
-end
+  for i in array
+    if i.length > 4
+      return true
+    else
+      return false
+    end
+  end
 end
 
-snacks = ["crackers", "gouda", "thyme"]
-soup = ["tomato soup", "cheddar", "oyster crackers", "gouda"]
-ingredients = ["garlic", "bread", "rosemary"]
+
+long_planeteer_calls(planeteer_calls)
 
 def find_the_cheese(array)
-  array.find do |cheese| 
-    cheese == "cheddar" || cheese == "gouda" || cheese == "camembert"
+  for i in array
+    if i == "cheddar" || i == "gouda" || i == "camembert"
+      return i 
+    else
+      return "Nil"
     end 
+    
   end 
-  
-find_the_cheese(ingredients)
+end
+
+
+snacks = ["crackers", "gouda", "thyme"]
+
+soup = ["tomato soup", "cheddar", "oyster crackers", "gouda"]
+
+
+
+find_the_cheese(snacks)
