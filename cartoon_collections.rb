@@ -25,22 +25,5 @@ end
 
 long_planeteer_calls(planeteer_calls)
 
-def find_the_cheese(array)
-  for i in array
-    if i == "cheddar" || i == "gouda" || i == "camembert"
-      return i 
-    else
-      return "Nil"
-    end 
-    
-  end 
-end
-
-
-snacks = ["crackers", "gouda", "thyme"]
-
-soup = ["tomato soup", "cheddar", "oyster crackers", "gouda"]
-
-
-
-find_the_cheese(snacks)
+def find_valid_calls(valid_calls)
+  
