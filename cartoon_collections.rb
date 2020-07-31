@@ -26,4 +26,5 @@ end
 long_planeteer_calls(planeteer_calls)
 
 def find_valid_calls(valid_calls)
-  
+  valid_calls = ["Earth!", "Wind!", "Fire!", "Water!", "Heart!"
+end
